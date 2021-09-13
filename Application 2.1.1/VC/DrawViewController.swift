@@ -53,7 +53,7 @@ class Canvas : UIView {
     }
 }
 
-class Drawing_ViewController: UIViewController {
+class DrawViewController: UIViewController {
 
     let canvas = Canvas()
     
@@ -61,9 +61,9 @@ class Drawing_ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //view.addSubview(canvas)
+        view.addSubview(canvas)
         canvas.backgroundColor = .white
-        //anvas.frame = view.frame
+        canvas.frame = view.frame
         
     }
     
@@ -79,3 +79,4 @@ class Drawing_ViewController: UIViewController {
     */
 
 }
+

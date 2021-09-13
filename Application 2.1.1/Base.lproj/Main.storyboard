@@ -262,8 +262,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Drag Finger to Draw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyL-du-H3x">
-                                <rect key="frame" x="131" y="132" width="153" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag Finger to Draw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyL-du-H3x">
+                                <rect key="frame" x="131" y="132" width="152" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -287,13 +287,13 @@
         <scene sceneID="gya-RU-Scc">
             <objects>
                 <navigationController id="ZeS-yM-2sN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Drawing" id="PDz-Bw-ZlD"/>
+                    <tabBarItem key="tabBarItem" title="Drawing" image="pencil.tip" catalog="system" id="PDz-Bw-ZlD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eta-IZ-4TG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="SBa-Au-BOq" kind="relationship" relationship="rootViewController" id="lCW-29-JVl"/>
+                        <segue destination="SBa-Au-BOq" kind="relationship" relationship="rootViewController" id="fcw-8L-B5d"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDe-Rz-7ee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -321,7 +321,7 @@
         <scene sceneID="pEB-ac-S78">
             <objects>
                 <navigationController id="Bgs-uF-X9n" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Logout" id="lox-Uw-ozm"/>
+                    <tabBarItem key="tabBarItem" title="Logout" image="person.crop.circle.badge.exclam.fill" catalog="system" id="lox-Uw-ozm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TyL-tB-38P">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -334,11 +334,11 @@
             </objects>
             <point key="canvasLocation" x="4426" y="388"/>
         </scene>
-        <!--Item-->
+        <!--Random Number-->
         <scene sceneID="dJc-es-KPK">
             <objects>
                 <navigationController id="Ebe-g5-wHa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8fb-1h-QLu"/>
+                    <tabBarItem key="tabBarItem" title="Random Number" image="shuffle" catalog="system" id="8fb-1h-QLu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AnY-wc-2U0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -381,17 +381,53 @@
             </objects>
             <point key="canvasLocation" x="4452" y="1106"/>
         </scene>
-        <!--View Controller-->
+        <!--Rand Num View Controller-->
         <scene sceneID="5iC-kW-sWR">
             <objects>
-                <viewController id="gl0-CJ-JeW" sceneMemberID="viewController">
+                <viewController id="gl0-CJ-JeW" customClass="RandNumViewController" customModule="Application_2_1_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jx0-fl-sYP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8eg-2g-hfW">
+                                <rect key="frame" x="40" y="348" width="334" height="100.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDA-8g-27f">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="7ZU-n7-Htv"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Pg8-ba-dXj"/>
+                                        </constraints>
+                                        <state key="normal" title="Number Generator"/>
+                                        <connections>
+                                            <action selector="numGenTapped:" destination="gl0-CJ-JeW" eventType="touchUpInside" id="TxD-5J-ko9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEj-FM-tSK">
+                                        <rect key="frame" x="0.0" y="80" width="334" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="kmX-Hy-Yos"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pM7-K5-AjK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pM7-K5-AjK" firstAttribute="trailing" secondItem="8eg-2g-hfW" secondAttribute="trailing" constant="40" id="CWQ-eb-0n7"/>
+                            <constraint firstItem="8eg-2g-hfW" firstAttribute="top" secondItem="pM7-K5-AjK" secondAttribute="top" constant="216" id="qvN-o7-eG6"/>
+                            <constraint firstItem="8eg-2g-hfW" firstAttribute="leading" secondItem="pM7-K5-AjK" secondAttribute="leading" constant="40" id="qwb-zs-op3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u9r-Ka-tuw"/>
+                    <connections>
+                        <outlet property="label" destination="iEj-FM-tSK" id="XVc-wE-eMu"/>
+                        <outlet property="numGen" destination="QDA-8g-27f" id="l7t-Fz-Z9h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIX-Cl-WqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,6 +438,9 @@
         <segue reference="zXR-S2-8yb"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="pencil.tip" catalog="system" width="99" height="128"/>
+        <image name="person.crop.circle.badge.exclam.fill" catalog="system" width="128" height="113"/>
+        <image name="shuffle" catalog="system" width="128" height="93"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

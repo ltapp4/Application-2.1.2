@@ -20,6 +20,8 @@
 		A324C8CD26EF6DA600026120 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C8CC26EF6DA600026120 /* Constants.swift */; };
 		A324C8CF26EF704000026120 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A324C8CE26EF704000026120 /* GoogleService-Info.plist */; };
 		A324C8D126EF73C000026120 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C8D026EF73C000026120 /* DrawViewController.swift */; };
+		A324C8D326EF7E6900026120 /* RandNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C8D226EF7E6900026120 /* RandNumViewController.swift */; };
+		A324C8D526EF84B800026120 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C8D426EF84B800026120 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		A324C8CC26EF6DA600026120 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A324C8CE26EF704000026120 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A324C8D026EF73C000026120 /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		A324C8D226EF7E6900026120 /* RandNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandNumViewController.swift; sourceTree = "<group>"; };
+		A324C8D426EF84B800026120 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				A324C8C626EF671000026120 /* SignViewController.swift */,
 				A324C8CA26EF6D7D00026120 /* HomeViewController.swift */,
 				A324C8D026EF73C000026120 /* DrawViewController.swift */,
+				A324C8D226EF7E6900026120 /* RandNumViewController.swift */,
+				A324C8D426EF84B800026120 /* Utilities.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -239,6 +245,8 @@
 				A324C8C526EF66F300026120 /* InitViewController.swift in Sources */,
 				A324C8CD26EF6DA600026120 /* Constants.swift in Sources */,
 				A324C8B226EF651900026120 /* SceneDelegate.swift in Sources */,
+				A324C8D326EF7E6900026120 /* RandNumViewController.swift in Sources */,
+				A324C8D526EF84B800026120 /* Utilities.swift in Sources */,
 				A324C8CB26EF6D7D00026120 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
